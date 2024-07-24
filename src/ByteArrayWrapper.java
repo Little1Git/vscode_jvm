@@ -37,7 +37,7 @@ public class ByteArrayWrapper {
 
         // byte[][] byteArrays = new byte[1024][1024 * 1024];
         // byte[] byteArrays = new byte[1024 * 1024 * 1824];
-        byte[][] byteArrays = new byte[1024][1024 * 2047];
+        byte[][] byteArrays = new byte[1024][1024 * 1024];
         // byte[][] byteArrays = new byte[1024 * 1024][1025];
 
         Runtime rt = Runtime.getRuntime();
@@ -45,6 +45,8 @@ public class ByteArrayWrapper {
         System.out.println("已分配内存: " + totalMemory + " 字节");
 
         young_old();
+
+        System.out.println();
 
     }
 

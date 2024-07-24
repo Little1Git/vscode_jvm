@@ -1,0 +1,53 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ByteArrayWrapper",
+            "request": "launch",
+            "mainClass": "ByteArrayWrapper",
+            "projectName": "vscode_jvm_a005bdf0",
+            "vmArgs": "-XX:G1HeapRegionSize=4m",
+            // "classpath": [
+            //     "out"
+            // ]
+        },
+        {
+            "type": "java",
+            "name": "GCExample",
+            "request": "launch",
+            "mainClass": "GCExample",
+            "projectName": "vscode_jvm_a005bdf0"
+        },
+        {
+            "type": "java",
+            "name": "HeapTest",
+            "request": "launch",
+            "mainClass": "HeapTest",
+            "projectName": "vscode_jvm_a005bdf0"
+        },
+        {
+            "type": "java",
+            "name": "MemoryUsageExample",
+            "request": "launch",
+            "mainClass": "MemoryUsageExample",
+            "projectName": "vscode_jvm_a005bdf0"
+        },
+        {
+            "type": "java",
+            "name": "with_package",
+            "request": "launch",
+            "mainClass": "myPackage.with_package",
+            "projectName": "vscode_jvm_a005bdf0"
+        }
+    ]
+}

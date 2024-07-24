@@ -1,0 +1,15 @@
+git init
+git remote add origin https://github.com/Little1Git/vscode_java.git
+git remote add origin https://github.com/Little1Git/vscode_jvm.git
+git add .
+git commit -m "Update"
+git push -u origin master
+
+显示哪些文件被修改、添加或删除
+git status
+
+git add .
+git commit -m "Update"
+git push -u origin master
+
+git clone https://github.com/Little1Git/vscode_java.git

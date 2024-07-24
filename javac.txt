@@ -13,4 +13,12 @@ java -cp .\src Hello
 修改win系统字符编码
 [Console]::OutputEncoding
 
-java -XX:+PrintFlagsFinal -XX:G1HeapRegionSize=2m --version | Select-String -Pattern "G1HeapRegionSize"
+java -XX:+PrintFlagsFinal -XX:G1HeapRegionSize=4m --version | Select-String -Pattern "HeapR"
+java -XX:+PrintFlagsFinal --version | Select-String -Pattern "HeapR"
+
+javac -d out src/ByteArrayWrapper.java
+java -XX:G1HeapRegionSize=4m -cp out ByteArrayWrapper
+
+1365
+1169
+1085
