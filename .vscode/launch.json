@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AsyncHttpClient",
+            "request": "launch",
+            "mainClass": "async.AsyncHttpClient",
+            "projectName": "vscode_jvm_a005bdf0"
+        },
+        {
+            "type": "java",
+            "name": "AsyncHttpServer",
+            "request": "launch",
+            "mainClass": "async.AsyncHttpServer",
+            "projectName": "vscode_jvm_a005bdf0"
+        },
+        {
+            "type": "java",
+            "name": "HttpClientAsyncExample",
+            "request": "launch",
+            "mainClass": "myPackage.HttpClientAsyncExample",
+            "projectName": "vscode_jvm_a005bdf0"
+        },
+        {
+            "type": "java",
+            "name": "SimpleHttpServer",
+            "request": "launch",
+            "mainClass": "myPackage.SimpleHttpServer",
+            "projectName": "vscode_jvm_a005bdf0"
+        },
+        {
+            "type": "java",
+            "name": "var_test",
+            "request": "launch",
+            "mainClass": "myPackage.var_test",
+            "projectName": "vscode_jvm_a005bdf0"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -16,10 +51,7 @@
             "request": "launch",
             "mainClass": "ByteArrayWrapper",
             "projectName": "vscode_jvm_a005bdf0",
-            "vmArgs": "-XX:G1HeapRegionSize=4m",
-            // "classpath": [
-            //     "out"
-            // ]
+            "vmArgs": "-XX:G1HeapRegionSize=4m"
         },
         {
             "type": "java",
