@@ -1,0 +1,16 @@
+javac .\src\Hello.java
+
+#    .\ 表示当前目录
+
+java -cp .\src Hello
+
+#    -cp 是 -classpath 的缩写
+
+.\compile.bat
+.\run.bat
+
+
+修改win系统字符编码
+[Console]::OutputEncoding
+
+java -XX:+PrintFlagsFinal -XX:G1HeapRegionSize=2m --version | Select-String -Pattern "G1HeapRegionSize"
