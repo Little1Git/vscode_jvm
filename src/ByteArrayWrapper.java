@@ -42,7 +42,8 @@ public class ByteArrayWrapper {
 
         Runtime rt = Runtime.getRuntime();
         long totalMemory = rt.totalMemory();
-        System.out.println("已分配内存: " + totalMemory + " 字节");
+        System.out.println();
+        System.out.println("已分配内存: " + totalMemory / (1024 * 1024) + " MB");
 
         young_old();
 
@@ -58,7 +59,8 @@ public class ByteArrayWrapper {
         MemoryUsage heapMemoryUsage = memoryMXBean.getHeapMemoryUsage();
         // 获取新生代和老年代的内存使用情况
         MemoryUsage youngGen = ManagementFactory.getMemoryPoolMXBeans().stream()
-                .filter(pool -> (pool.getName().contains("Eden") || pool.getName().contains("Survivor")))
+                .filter(pool -> (pool.getName().contains("Eden") || pool.getName().contains("Surviv")))
+                // .filter(pool -> (pool.getName().contains("Eden") ))
                 .findFirst()
                 .map(MemoryPoolMXBean::getUsage)
                 .orElse(null);
@@ -75,25 +77,27 @@ public class ByteArrayWrapper {
         System.out.println("已提交大小: " + heapMemoryUsage.getCommitted() / (1024 * 1024) + "MB");
         System.out.println("最大大小: " + heapMemoryUsage.getMax() / (1024 * 1024) + "MB");
 
-        // System.out.println("\n新生代内存使用情况:");
-        // if (youngGen != null) {
-        // System.out.println("初始大小: " + youngGen.getInit() / (1024 * 1024) + "MB");
-        // System.out.println("已使用大小: " + youngGen.getUsed() / (1024 * 1024) + "MB");
-        // System.out.println("已提交大小: " + youngGen.getCommitted() / (1024 * 1024) +
-        // "MB");
-        // System.out.println("最大大小: " + youngGen.getMax() / (1024 * 1024) + "MB");
-        // } else {
-        // System.out.println("无法获取新生代内存使用情况");
-        // }
+        System.out.println("\n新生代内存使用情况:");
+        if (youngGen != null) {
+        System.out.println("初始大小: " + youngGen.getInit() / (1024 * 1024) + "MB");
+        System.out.println("已使用大小: " + youngGen.getUsed() / (1024 * 1024) + "MB");
+        System.out.println("已提交大小: " + youngGen.getCommitted() / (1024 * 1024) +
+        "MB");
+        System.out.println("最大大小: " + youngGen.getMax() / (1024 * 1024) + "MB");
+        } else {
+        System.out.println("无法获取新生代内存使用情况");
+        }
 
-        // System.out.println("\n老年代内存使用情况:");
-        // if (oldGen != null) {
-        // System.out.println("初始大小: " + oldGen.getInit() / (1024 * 1024) + "MB");
-        // System.out.println("已使用大小: " + oldGen.getUsed() / (1024 * 1024) + "MB");
-        // System.out.println("已提交大小: " + oldGen.getCommitted() / (1024 * 1024) + "MB");
-        // System.out.println("最大大小: " + oldGen.getMax() / (1024 * 1024) + "MB");
-        // } else {
-        // System.out.println("无法获取老年代内存使用情况");
-        // }
+        System.out.println("\n老年代内存使用情况:");
+        if (oldGen != null) {
+        System.out.println("初始大小: " + oldGen.getInit() / (1024 * 1024) + "MB");
+        System.out.println("已使用大小: " + oldGen.getUsed() / (1024 * 1024) + "MB");
+        System.out.println("已提交大小: " + oldGen.getCommitted() / (1024 * 1024) + "MB");
+        System.out.println("最大大小: " + oldGen.getMax() / (1024 * 1024) + "MB");
+        } else {
+        System.out.println("无法获取老年代内存使用情况");
+
+
+        }
     }
 }

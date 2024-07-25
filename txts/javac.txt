@@ -18,6 +18,14 @@ java -XX:+PrintFlagsFinal --version | Select-String -Pattern "HeapR"
 
 javac -d out src/ByteArrayWrapper.java
 java -XX:G1HeapRegionSize=4m -cp out ByteArrayWrapper
+#    -cp 是 -classpath 的缩写, 类路径为out目录
+
+设置JVM堆大小
+java -Xms1000m -Xmx3000m -cp out ByteArrayWrapper
+设置JVM栈大小
+java -Xss1024k -cp out ByteArrayWrapper
+使用G1垃圾收集器进行垃圾回收
+java -XX:+UseG1GC -cp out ByteArrayWrapper
 
 1365
 1169

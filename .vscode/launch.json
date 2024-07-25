@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Heapsize",
+            "request": "launch",
+            "mainClass": "Heapsize",
+            "projectName": "vscode_jvm_a005bdf0"
+        },
+        {
+            "type": "java",
             "name": "AsyncHttpClient",
             "request": "launch",
             "mainClass": "async.AsyncHttpClient",
