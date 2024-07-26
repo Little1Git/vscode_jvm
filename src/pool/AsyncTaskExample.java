@@ -19,7 +19,7 @@ public class AsyncTaskExample {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {   //JDK 8
         // 创建多个异步任务
         CompletableFuture<Void> task1 = CompletableFuture.runAsync(() -> async_task());
         CompletableFuture<Void> task2 = CompletableFuture.runAsync(() -> async_task());

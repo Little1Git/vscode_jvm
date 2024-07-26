@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Future",
+            "request": "launch",
+            "mainClass": "Future",
+            "projectName": "vscode_jvm_a005bdf0"
+        },
+        {
+            "type": "java",
             "name": "Heapsize",
             "request": "launch",
             "mainClass": "Heapsize",
