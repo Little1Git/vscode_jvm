@@ -4,6 +4,7 @@ import java.lang.management.MemoryPoolMXBean;
 import java.lang.management.MemoryUsage;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ByteArrayWrapper {
     private List<byte[]> byteArrays;
@@ -37,15 +38,26 @@ public class ByteArrayWrapper {
 
         // byte[][] byteArrays = new byte[1024][1024 * 1024];
         // byte[] byteArrays = new byte[1024 * 1024 * 1824];
-        byte[][] byteArrays = new byte[1024][1024 * 1024];
+        byte[][] byteArrays = new byte[1024][1024 * 1023];
         // byte[][] byteArrays = new byte[1024 * 1024][1025];
 
-        Runtime rt = Runtime.getRuntime();
-        long totalMemory = rt.totalMemory();
-        System.out.println();
-        System.out.println("已分配内存: " + totalMemory / (1024 * 1024) + " MB");
+        // Runtime rt = Runtime.getRuntime();
+        // long totalMemory = rt.totalMemory();
+        // System.out.println();
+        // System.out.println("已分配内存: " + totalMemory / (1024 * 1024) + " MB");
 
         young_old();
+
+        // 创建 Scanner 对象，用于从标准输入读取数据
+        Scanner scanner = new Scanner(System.in);
+
+        // 提示用户输入一行文本
+        System.out.println("请输入一行文本：");
+        String text = scanner.nextLine();
+        System.out.println("你输入的文本是：" + text);
+
+        // 关闭 Scanner 对象
+        scanner.close();
 
         System.out.println();
 
