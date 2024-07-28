@@ -1,5 +1,6 @@
+git clone 
+
 git init
-git remote add origin https://github.com/Little1Git/vscode_java.git
 git remote add origin https://github.com/Little1Git/vscode_jvm.git
 git add .
 git commit -m "Update"
@@ -15,4 +16,4 @@ git push -u origin master
 git add .; git commit -m "Update"; git push -u origin master
 
 
-git clone https://github.com/Little1Git/vscode_java.git
+

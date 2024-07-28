@@ -1,0 +1,27 @@
+.\gradlew.bat build
+
+.\gradlew.bat tasks
+
+.\gradlew.bat :app:tasks
+
+gradlew.bat tasks --all
+
+gradlew.bat :app:hello
+gradlew.bat :app:greet
+
+gradlew.bat build
+
+gradlew.bat jar
+gradlew.bat run
+.\gradlew.bat :app:dependencies
+// gradlew.bat build --scan
+
+gradlew.bat clean
+gradlew.bat classes
+
+
+
+
+
+
+
