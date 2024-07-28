@@ -20,6 +20,14 @@ gradlew.bat clean
 gradlew.bat classes
 
 
+rpc
+./gradlew.bat installDist
+./build/install/examples/bin/hello-world-server.bat
+./build/install/examples/bin/hello-world-client.bat
+
+1.4 NIO
+10 var
+11 HTTPClient
 
 
 

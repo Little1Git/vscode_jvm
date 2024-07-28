@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "otherPackage",
+            "request": "launch",
+            "mainClass": "package2.p3.otherPackage",
+            "projectName": "vscode_jvm_6a64a578"
+        },
+        {
+            "type": "java",
+            "name": "otherPackage",
+            "request": "launch",
+            "mainClass": "package2.otherPackage",
+            "projectName": "vscode_jvm_6a64a578"
+        },
+        {
+            "type": "java",
+            "name": "otherPackage",
+            "request": "launch",
+            "mainClass": "myPackage.otherPackage",
+            "projectName": "vscode_jvm_6a64a578"
+        },
+        {
+            "type": "java",
             "name": "Future",
             "request": "launch",
             "mainClass": "Future",
