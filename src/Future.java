@@ -22,13 +22,17 @@ public class Future {
         CompletableFuture<String> task1 = CompletableFuture.supplyAsync(() -> myClassInstance.async_task());
         CompletableFuture<String> task2 = CompletableFuture.supplyAsync(() -> myClassInstance.async_task());
         CompletableFuture<String> task3 = CompletableFuture.supplyAsync(() -> myClassInstance.async_task());
+        // 接受一个 Supplier 函数, Supplier 是 Java 中的一个函数式接口
+        // @FunctionalInterface
+        // public interface Supplier<T> {
+        //     T get();
+        // }
 
         CompletableFuture<Void> allTasks = CompletableFuture.allOf(task1, task2, task3);
 
         System.out.println("11111111111111111");
 
-        // 阻塞调用它的程序，直到所有异步任务完成
-        allTasks.join();
+        allTasks.join();  // 阻塞调用它的程序，直到所有异步任务完成
 
         System.out.println("22222222222222222");
 
@@ -41,3 +45,4 @@ public class Future {
         }
     }
 }
+
