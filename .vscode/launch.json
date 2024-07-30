@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SimpleHttpGet",
+            "request": "launch",
+            "mainClass": "http_client.SimpleHttpGet",
+            "projectName": "vscode_jvm_a005bdf0"
+        },
+        {
+            "type": "java",
             "name": "otherPackage",
             "request": "launch",
             "mainClass": "package2.p3.otherPackage",

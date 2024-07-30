@@ -1,3 +1,6 @@
+gradle init --type java-application  --dsl groovy
+gradle init --type java-application  --dsl kotlin
+
 .\gradlew.bat build
 
 .\gradlew.bat tasks
@@ -29,7 +32,25 @@ rpc
 10 var
 11 HTTPClient
 
+./gradlew.bat dependencies --info
+./gradlew.bat build --refresh-dependencies
 
 
 
+var Pri_Proxy="rb-proxy-apac.bosch.com:8080";
+var Sec_Proxy="rb-proxy-de.bosch.com:8080";
 
+ping rb-proxy-apac.bosch.com
+Pinging rb-proxy-apac.bosch.com [10.187.197.9] 
+
+ping rb-proxy-de.bosch.com
+Pinging rb-proxy-de.bosch.com [10.4.103.143] 
+
+
+systemProp.http.proxyHost=10.187.197.9
+systemProp.http.proxyPort=8080
+
+systemProp.https.proxyHost=10.187.197.9
+systemProp.https.proxyPort=8080
+
+gradle init --type java-application  --dsl kotlin
