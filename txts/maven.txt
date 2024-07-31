@@ -1,1 +1,6 @@
-mvn archetype:generate -DgroupId=com.example -DartifactId=myPro -DarchetypeArtifactId=maven-archetype-quickstart 
+mvn archetype:generate -DgroupId=com.example -DartifactId=myPro 
+
+
+mvn clean install
+
+mvn spring-boot:run
