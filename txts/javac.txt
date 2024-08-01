@@ -30,3 +30,7 @@ java -XX:+UseG1GC -cp out ByteArrayWrapper
 1365
 1169
 1085
+
+
+java -jar xx.jar
+jar xf xx.jar
