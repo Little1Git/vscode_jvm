@@ -3,6 +3,10 @@ mvn archetype:generate -DgroupId=com.example -DartifactId=myPro
 
 mvn clean install
 
+强制更新Maven仓库，清除缓存的错误信息。
+mvn clean install -U
+
+
 mvn spring-boot:run
 
 
