@@ -1,11 +1,11 @@
-git clone 
+git clone https://github.com/Little1Git/sky-taje-out-01.git
 
 
 git pull origin master
 
 
 git init
-git remote add origin https://github.com/Little1Git/vscode_jvm.git
+git remote add origin https://github.com/Little1Git/demo_kafka.git
 git add .
 git commit -m "Update"
 git push -u origin master

@@ -7,3 +7,38 @@ mvn spring-boot:run
 
 
 tree /F /A
+
+
+mvn clean package
+
+java -jar
+
+keytool -importcert -file path\to\szhlinvma41.apac.bosch.com -keystore "%JAVA_HOME%\lib\security\cacerts" -alias mycert
+
+password: changeit
+
+
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>public</id>-->
+<!--            <name>aliyun nexus</name>-->
+<!--            <url>https://maven.aliyun.com/repository/public</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--        </repository>-->
+<!--    </repositories>-->
+
+<!--    <pluginRepositories>-->
+<!--        <pluginRepository>-->
+<!--            <id>public</id>-->
+<!--            <name>aliyun nexus</name>-->
+<!--            <url>https://maven.aliyun.com/repository/public</url>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </pluginRepository>-->
+<!--    </pluginRepositories>-->
