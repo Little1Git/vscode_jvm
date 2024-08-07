@@ -9,6 +9,9 @@ mvn clean install -U
 
 mvn spring-boot:run
 
+mvn clean spring-boot:run
+
+
 
 tree /F /A
 
